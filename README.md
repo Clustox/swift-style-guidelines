@@ -265,3 +265,14 @@ manager.fetchAllNotifications()
 *	If a class must not exceed 200 lines of code. If it does, its time to refactor.
 *	If you want to add any functionality to the existing code, add a new extension of that class instead of changing the current one.
 *	Separate business logic completely from controller code.
+
+### Credits
+
+This guide is established through a collaborative effort of Team Clustox. Following are some of the sources we have taken inspiration from:
+
+* [Github](https://github.com/github/swift-style-guide)
+* [Swift](https://swift.org/documentation/api-design-guidelines/#follow-case-conventions)
+* [Apple](https://developer.apple.com/swift/)
+* [Raywenderlich](https://github.com/raywenderlich/swift-style-guide#code-organization)
+* [AppsFoundation](https://www.appsfoundation.com/post/swift-code-convention-and-guidelines)
+* [BigNerdRanch](https://www.bignerdranch.com/blog/error-handling-in-swift-2/)
