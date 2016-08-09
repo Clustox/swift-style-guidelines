@@ -25,7 +25,7 @@ let firstNumber = 5
 let secondNumber = 10
 let sum = firstNumber + secondNumber
 ```
-<br>
+
 * Avoid spelling mistakes and abbreviations for variable names.
 
 #### Avoid Using
@@ -41,7 +41,7 @@ let tableView
 let searchBar
 var amount
 ```
-<br>
+
 * Parameter names must be there in function definition to clear ambiguity and provide clarity about nature and type of a certain parameter name.
 
 #### Avoid Using
@@ -53,7 +53,7 @@ manager.remove(x)
 ```swift
 manager.remove(notificationId: x)
 ```
-<br>
+
 * Function names must be short and precise.  Avoid repetition of information.
 
 #### Avoid Using
@@ -69,23 +69,23 @@ manager.remove(notificationId: x)
 ### Enums
 
 * Enum name must be Camel case.
-* Values of Enum must be in lower case.
+* Values of Enum must be in Camel case.
 
 #### Avoid Using
 ```swift
 public enum titles: String {
-	case Settings = "Settings"
-	case Feed = "Feed"
-	case Friends = "Friends"
+	case settings = "Settings"
+	case feed = "Feed"
+	case friends = "Friends"
 }
 ```
 
 #### Instead Use
 ```swift
 public enum Titles: String {
-	case settings = "Settings"
-	case feed = "Feed"
-	case friends = "Friends"
+	case Settings = "Settings"
+	case Feed = "Feed"
+	case Friends = "Friends"
 }
 ```
 
@@ -168,6 +168,56 @@ In Swift, struct are way more powerful than their counterparts. Like class, stru
 So except inheritance, structs are very much classes in Swift and are really lightweight and faster when it comes to processing. Inheritance itself is not a good enough reason to use classes. It can be achieved by using protocols and Composition, which is highly supported in Swift.
 </p>
 
+### Error Handling
+
+* Preferred way to handle an error is to throw. The object thrown must conform to the ErrorType protocol. NSError conforms to this protocol. Enums are used for classifying errors. 
+
+```swift
+enum SomeError: ErrorType {
+	case LowLevel
+	case MiddleLevel
+    case HighLevel
+}
+```
+
+```swift
+func doSomeStuff(argument: String) throws {
+	guard !argument.notRequired else {
+  		throw SomeError.LowLevel
+	}
+
+	guard !argument.notRecommended else {
+  		throw SomeError.MiddleLevel
+	}
+
+	guard !argument.restricted else {
+  		throw SomeError.HighLevel
+	}
+	// do your stuff
+}
+```
+
+* Use ***try*** ***catch*** ***finally*** to handle exceptions.
+
+```swift
+	do {
+  		let response = try argument.doSomeStuff
+	}
+
+	catch SomeError.LowLevel {
+  		// handle Exception
+	}
+	
+	catch SomeError.MiddleLevel {
+  		// handle Exception
+	}
+
+	catch SomeError.HighLevel {
+  		// handle Exception
+	}
+	// do your stuff
+```
+
 ### Documentation
 
 * Try documenting the code as much as you can. Every public variable, type, method must be documented. 
@@ -212,3 +262,6 @@ manager.fetchAllNotifications()
 
 *	Remove commented and unused code from project.
 *	Switch, while, for, if, else and methods must have open brackets on same line but closing brackets on next line.
+*	If a class must not exceed 200 lines of code. If it does, its time to refactor.
+*	If you want to add any functionality to the existing code, add a new extension of that class instead of changing the current one.
+*	Separate business logic completely from controller code.
