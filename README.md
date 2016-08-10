@@ -262,7 +262,7 @@ manager.fetchAllNotifications()
 
 *	Remove commented and unused code from project.
 *	Switch, while, for, if, else and methods must have open brackets on same line but closing brackets on next line.
-*	If a class must not exceed 200 lines of code. If it does, its time to refactor.
+*	A class must not exceed 200 lines of code. If it does, its time to refactor.
 *	If you want to add any functionality to the existing code, add a new extension of that class instead of changing the current one.
 *	Separate business logic completely from controller code.
 
