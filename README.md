@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Swift is a new programming language, first introduced by Apple in June 2014 for development on iOS, OSX, tVOS and WatchOS. We can call it as future of mobile development with Apple. Here are a few guidelines for programmers starting to learn this language.
+Swift is a new programming language, first introduced by Apple in June 2014 for development on iOS, OSX, tVOS and WatchOS. We can call it the future of mobile development in Apple. Here are a few guidelines for programmers starting to learn this language.
 
 <br>
 Want to work in Objective-C, here is our [Objective-C guideline](https://github.com/Clustox/objective-c-style-guidelines)
@@ -42,7 +42,7 @@ let searchBar
 var amount
 ```
 
-* Parameter names must be there in function definition to clear ambiguity and provide clarity about nature and type of a certain parameter name.
+* Parameter names must be there in function definition to clear ambiguity and provide clarity about nature and type of a certain parameter.
 
 #### Avoid Using
 ```swift
@@ -126,7 +126,7 @@ guard let childId = self.childId else {
 ### Access Specifier 
 
 * Use access specifier on class level types, variables and functions to clear their scope.
-* If no specifier is provided, by default it would be public.
+* If no specifier is provided by default, it would be public.
 
 ### Defining Variables
 
@@ -144,7 +144,7 @@ guard let childId = self.childId else {
 
 ### Force Unwrapping
 
-* Avoid force unwrapping of Optional values. Use ***guard*** instead to unwrap the values.
+* Avoid force unwrapping of Optional values instead Use ***guard***  to unwrap the values.
 
 #### Avoid Using
 ```swift
@@ -163,9 +163,7 @@ students.remove(at: index)
 ### Prefer structs over classes
 
 <p>
-In Swift, struct are way more powerful than their counterparts. Like class, struct can also have properties, methods, protocols, extensions and initialisers.
-
-So except inheritance, structs are very much classes in Swift and are really lightweight and faster when it comes to processing. Inheritance itself is not a good enough reason to use classes. It can be achieved by using protocols and Composition, which is highly supported in Swift.
+In Swift, the structs are way more powerful than their counterparts. Like class, struct can also have properties, methods, protocols, extensions and initialisers. So except inheritance, structs are very much classes in Swift and are really light-weight and faster when it comes to processing. Inheritance itself is not a good enough reason to use classes. It can be achieved by using protocols and Composition, which is highly supported in Swift.
 </p>
 
 ### Error Handling
@@ -262,7 +260,7 @@ manager.fetchAllNotifications()
 
 *	Remove commented and unused code from project.
 *	Switch, while, for, if, else and methods must have open brackets on same line but closing brackets on next line.
-*	A class must not exceed 200 lines of code. If it does, its time to refactor.
+*	A class must not exceed 200 lines of code. If it does, it's time to refactor.
 *	If you want to add any functionality to the existing code, add a new extension of that class instead of changing the current one.
 *	Separate business logic completely from controller code.
 
