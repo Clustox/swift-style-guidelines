@@ -126,7 +126,7 @@ guard let childId = self.childId else {
 ### Access Specifier 
 
 * Use access specifier on class level types, variables and functions to clear their scope.
-* If no specifier is provided by default, it would be public.
+* If no specifier is provided, by default it would be public.
 
 ### Defining Variables
 
@@ -144,7 +144,7 @@ guard let childId = self.childId else {
 
 ### Force Unwrapping
 
-* Avoid force unwrapping of Optional values instead Use ***guard***  to unwrap the values.
+* Avoid force unwrapping of Optional values. Instead Use ***guard*** to unwrap the values.
 
 #### Avoid Using
 ```swift
@@ -163,7 +163,7 @@ students.remove(at: index)
 ### Prefer structs over classes
 
 <p>
-In Swift, the structs are way more powerful than their counterparts. Like class, struct can also have properties, methods, protocols, extensions and initialisers. So except inheritance, structs are very much classes in Swift and are really light-weight and faster when it comes to processing. Inheritance itself is not a good enough reason to use classes. It can be achieved by using protocols and Composition, which is highly supported in Swift.
+In Swift, structs are way more powerful than their counterparts. Like class, struct can also have properties, methods, protocols, extensions and initialisers. So except inheritance, structs are very much classes in Swift and are really light-weight and faster when it comes to processing. Inheritance itself is not a good enough reason to use classes. It can be achieved by using protocols and Composition, which is highly supported in Swift.
 </p>
 
 ### Error Handling
@@ -220,9 +220,9 @@ func doSomeStuff(argument: String) throws {
 
 * Try documenting the code as much as you can. Every public variable, type, method must be documented. 
 * If changing an existing code or doing something in a way which is not recommended, make sure to document the reason properly. 
-*	Follow a standard documentation style through out the app. Using three slash documentation will help you adding a default template for documentation.
-*	Documentation must add enough information about method name, variables types, function they perform and expected output of any method.
-*	Install [VVDocumenter](https://github.com/onevcat/VVDocumenter-Xcode) for standard documentation style
+* Follow a standard documentation style through out the app. Using three slash documentation will help you adding a default template for documentation.
+* Documentation must add enough information about method name, variables types, function they perform and expected output of any method.
+* Install [VVDocumenter](https://github.com/onevcat/VVDocumenter-Xcode) for standard documentation style
 
 ### General Guidelines
 
